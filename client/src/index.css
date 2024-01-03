@@ -13,7 +13,7 @@
         @apply block mb-[7px] text-[12px] text-[#9A9A9A] font-normal;
     }
     .input {
-        @apply border-b border-b-[#3592FF] text-[#535353] py-1 w-full outline-none placeholder:text-[18px] aria-[invalid="true"]:outline-red-500 aria-[invalid="true"]:outline-2;
+        @apply border-b border-b-[#3592FF] text-[#535353] py-1 w-full outline-none placeholder:text-[18px] aria-[invalid="true"]:border-b-[#FF0000];
         transition: outline-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .error {

@@ -6,11 +6,12 @@
   "author": "Zh",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=local nodemon index.js"
+    "dev": "cross-env NODE_ENV=local nodemon src/index.js"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "body-parser": "^1.17.1",
+    "cors": "^2.8.5",
     "cross-env": "^7.0.3",
     "express": "^4.15.2",
     "jayson": "^3.4.4",

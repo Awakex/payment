@@ -1,5 +1,6 @@
 const ErrorMSG = () => ({ message: "Bad request", code: 110143 });
 const PORT = process.env.PORT || 2050;
+const cors = require('cors')
 const bodyParser = require("body-parser"),
   { isString, getRandomRange } = require("./utils"),
   express = require("express"),
@@ -27,7 +28,7 @@ const EmployeeServices = jayson.server({
   pay: (args, cb) => (args ? paymentSession(args, cb) : cb(ErrorMSG()))
 });
 
-app.use(bodyParser.json());
+app.use(cors(), bodyParser.json());
 app.post("/api", EmployeeServices.middleware());
 
 app.get("/pay/check/*", (request, response) => {
